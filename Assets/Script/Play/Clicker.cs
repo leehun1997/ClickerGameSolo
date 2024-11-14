@@ -12,6 +12,7 @@ public class Clicker : MonoBehaviour, Clickable
     [SerializeField] private ItemSO[] itemList;
     [SerializeField] private GameObject catImage;
     [SerializeField] private TextMeshProUGUI catName;
+    [SerializeField] private TextMeshProUGUI catDuration;
 
     private event Action Click;
     private float stackPoint = 0f;
@@ -53,13 +54,14 @@ public class Clicker : MonoBehaviour, Clickable
 
         if (itemList != null)
         {
-            foreach (ItemSO item in itemList)
+            foreach (ItemSO item in itemList)//나중에 아이템으로 오르는 효과 적용
             {
                 value += item.ItemCost;
             }
         }
         
         value += currentSelectcatData.CatClickPoint;
+        //currentSelectcatData.Duration--;
 
         Debug.Log(value);
         GameManger.Instance.scoreUI.Changescore(value);
@@ -76,6 +78,7 @@ public class Clicker : MonoBehaviour, Clickable
     {
         catImage.GetComponentInChildren<Image>().sprite = currentSelectcatData.CatImage;
         catName.text = currentSelectcatData.CatName;
+        catDuration.text = (currentSelectcatData.Duration).ToString();
     }
 
     public void ChangeCurrentSelectData(CatSO catSO)
