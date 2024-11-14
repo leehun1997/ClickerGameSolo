@@ -1,0 +1,2 @@
+# ClickerGameSolo
+ ClickerGameSolo
