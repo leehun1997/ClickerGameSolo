@@ -28,7 +28,7 @@ public class GameManger : MonoBehaviour
     public ScoreManger scoreUI;
     public HouseController houseController;
     private float lastCheckTime;
-    [SerializeField] private float checkDuration = 0.5f;
+    [SerializeField] private float checkDuration = 0.1f;
 
     public Queue<Action> clickEventQueue;
     public Action noneclickEventQueue;
@@ -67,7 +67,7 @@ public class GameManger : MonoBehaviour
         }
 
         //일반적으로 늘어나는 것이 아니라 누를때만 오르고 안누르면 값을 저장 했다가 한번에 수행
-        Debug.Log("Not Clicking!");
+        //Debug.Log("Not Clicking!");
         noneclickEventQueue?.Invoke();
         return;
     }

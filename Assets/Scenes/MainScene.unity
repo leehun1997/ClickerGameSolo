@@ -208,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 73874510}
   - component: {fileID: 73874511}
+  - component: {fileID: 73874512}
   m_Layer: 5
   m_Name: Slots
   m_TagString: Untagged
@@ -265,6 +266,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &73874512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73874509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71fca67733bb50a46bb1372bec5ecd25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStoreSelectType: 1
+  ItemSO: []
 --- !u!1 &128982501
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +916,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 251598871}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1412033746}
+        m_TargetAssemblyTypeName: StoreController, Assembly-CSharp
+        m_MethodName: OnStoreTypeButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &251598871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2795,7 +2822,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1217505640}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1412033746}
+        m_TargetAssemblyTypeName: StoreController, Assembly-CSharp
+        m_MethodName: OnStoreTypeButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1217505640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2886,6 +2925,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f82cf4acf6ca364cb7ea74f24aedd3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catList: []
+  houseList: []
+  consumableList: []
+  equipmentList: []
+  slots: {fileID: 73874512}
 --- !u!1001 &1436071008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3560,7 +3604,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1637092457}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1412033746}
+        m_TargetAssemblyTypeName: StoreController, Assembly-CSharp
+        m_MethodName: OnStoreTypeButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1637092457
 MonoBehaviour:
   m_ObjectHideFlags: 0
