@@ -28,6 +28,18 @@ public class ScoreManger : MonoBehaviour
         score += value;
         OnUIChange?.Invoke();
     }
+    public bool BuyItem(float value)
+    {
+        if(score < value)
+        {
+            Debug.Log("Not Enough Jelly.");
+            return false;
+        }
+
+        score -= value;
+        OnUIChange?.Invoke();
+        return true;
+    }
     public void ChangePassivescore(float value)
     {
         totalPassiveScore += value;

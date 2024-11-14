@@ -10,4 +10,5 @@ public class ItemSO : ScriptableObject
     public string ItemName;
     public Sprite ItemImage;
     public float ItemCost;
+    public int ItemCount;
 }
